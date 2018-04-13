@@ -54,9 +54,9 @@ public class MusicView extends View {
     RectF circle4 = new RectF(-circleRadius4, -circleRadius4, circleRadius4, circleRadius4);
     RectF circle5 = new RectF(-circleRadius5, -circleRadius5, circleRadius5, circleRadius5);
 
-    float circleDotRadius1 = dp2Dx(15);
-    float circleDotRadius2 = dp2Dx(13);
-    float circleDotRadius3 = dp2Dx(18);
+    float circleDotRadius1 = dp2Dx(13);
+    float circleDotRadius2 = dp2Dx(12);
+    float circleDotRadius3 = dp2Dx(15);
 
     float circleDot1X = polarX(circleRadius1, 30);
     float circleDot1Y = polarY(circleRadius1, 30);
@@ -183,7 +183,7 @@ public class MusicView extends View {
                     animator1.start();
                 }
                 if (animator2 != null) {
-                    animator2.setStartDelay(1000);
+                    animator2.setStartDelay(500);
                     animator2.start();
                 }
             }
@@ -281,7 +281,7 @@ public class MusicView extends View {
 
 
         animator3 = ValueAnimator.ofFloat(0, 2, 0);
-        animator3.setDuration(800);
+        animator3.setDuration(500);
         animator3.setRepeatCount(1);
         animator3.setInterpolator(accelerateInterpolator);
         animator3.addListener(new AnimatorListenerAdapter() {
@@ -362,7 +362,7 @@ public class MusicView extends View {
         });
 
         animator6 = ValueAnimator.ofInt(dp2Dx(100), 0, 0);
-        animator6.setDuration(2000);
+        animator6.setDuration(1000);
         animator6.setInterpolator(new DecelerateInterpolator());
         animator6.setRepeatCount(2);
         animator6.addListener(new AnimatorListenerAdapter() {
